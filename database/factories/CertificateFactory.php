@@ -18,6 +18,11 @@ class CertificateFactory extends Factory
     {
         return [
             //
+            'certificate_number' => fake()->numerify('################'),
+            'email' => fake()->freeEmail,
+            'is_activated' => false,
+            'expiration_date' => fake()->dateTimeBetween($startDate = '-2 years', $endDate = '+2 years', $timezone = null),
+            'description' => fake()->sentence,
         ];
     }
 }

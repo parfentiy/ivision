@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->boolean('is_activated');
             $table->string('security_code')->nullable();
-            $table->string('certificate_url');
+            $table->string('certificate_url')->nullable();
             $table->date('expiration_date');
             $table->string('description')->nullable();
             $table->timestamps();
